@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/fragmentMain"
         android:name="com.example.jogotcc.Activity.FragmentMain"
-        android:label="FragmentMain" >
+        android:label="FragmentMain">
         <action
             android:id="@+id/action_fragmentMain_to_niveisFragment"
             app:destination="@id/niveisFragment" />
@@ -107,7 +107,9 @@
         tools:layout="@layout/fragment_fase_dois_nivel_um">
         <action
             android:id="@+id/action_faseDoisNivelUmFragment_to_fasesNivelUmFragment"
-            app:destination="@id/fragment_fases_nivel_um" />
+            app:destination="@id/fragment_fases_nivel_um"
+            app:popUpTo="@id/fragment_fases_nivel_um"
+            app:popUpToInclusive="true" />
     </fragment>
 
 
@@ -126,7 +128,9 @@
         tools:layout="@layout/fragment_fase_dois_nivel_dois">
         <action
             android:id="@+id/action_faseDoisNivelDoisFragment_to_fasesNivelDoisFragment"
-            app:destination="@id/fragment_fases_nivel_dois" />
+            app:destination="@id/fragment_fases_nivel_dois"
+            app:popUpTo="@id/fragment_fases_nivel_dois"
+            app:popUpToInclusive="true" />
     </fragment>
 
 
@@ -145,7 +149,9 @@
         tools:layout="@layout/fragment_fase_dois_nivel_tres">
         <action
             android:id="@+id/action_faseDoisNivelTresFragment_to_fasesNivelTresFragment"
-            app:destination="@id/fragment_fases_nivel_tres" />
+            app:destination="@id/fragment_fases_nivel_tres"
+            app:popUpTo="@id/fragment_fases_nivel_tres"
+            app:popUpToInclusive="true" />
     </fragment>
 
 
@@ -164,7 +170,9 @@
         tools:layout="@layout/fragment_fase_dois_nivel_bonus">
         <action
             android:id="@+id/action_faseDoisNivelBonusFragment_to_fasesNivelBonusFragment"
-            app:destination="@id/fragment_fases_nivel_bonus" />
+            app:destination="@id/fragment_fases_nivel_bonus"
+            app:popUpTo="@id/fragment_fases_nivel_bonus"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>
