@@ -1,0 +1,170 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.example.jogotcc.Activity.FragmentMain"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_niveisFragment"
+            app:destination="@id/niveisFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/niveisFragment"
+        android:name="com.example.jogotcc.Activity.NiveisFragment"
+        android:label="Níveis">
+        <action
+            android:id="@+id/action_navegar_para_fases_nivel_um"
+            app:destination="@id/fragment_fases_nivel_um" />
+
+        <action
+            android:id="@+id/action_navegar_para_fases_nivel_dois"
+            app:destination="@id/fragment_fases_nivel_dois" />
+
+        <action
+            android:id="@+id/action_navegar_para_fases_nivel_tres"
+            app:destination="@id/fragment_fases_nivel_tres" />
+
+        <action
+            android:id="@+id/action_navegar_para_fases_nivel_bonus"
+            app:destination="@id/fragment_fases_nivel_bonus" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_fases_nivel_um"
+        android:name="com.example.jogotcc.NivelUm.FasesNivelUmFragment"
+        android:label="FasesNivelUmFragment">
+        <!-- Ação para navegar para FaseUmNivelUmFragment -->
+        <action
+            android:id="@+id/action_navegar_para_fase_um"
+            app:destination="@id/faseUmNivelUmFragment" />
+
+        <action
+            android:id="@+id/action_navegar_para_fase_dois"
+            app:destination="@id/faseDoisNivelUmFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_fases_nivel_dois"
+        android:name="com.example.jogotcc.NivelDois.FasesNivelDoisFragment"
+        android:label="FasesNivelDoisFragment">
+        <!-- Ação para navegar para FaseUmNivelDoisFragment -->
+        <action
+            android:id="@+id/action_navegar_para_fase_um"
+            app:destination="@id/faseUmNivelDoisFragment" />
+
+        <action
+            android:id="@+id/action_navegar_para_fase_dois"
+            app:destination="@id/faseDoisNivelDoisFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_fases_nivel_tres"
+        android:name="com.example.jogotcc.NivelTres.FasesNivelTresFragment"
+        android:label="FasesNivelTresFragment">
+        <!-- Ação para navegar para FaseUmNivelTresFragment -->
+        <action
+            android:id="@+id/action_navegar_para_fase_um"
+            app:destination="@id/faseUmNivelTresFragment" />
+
+        <action
+            android:id="@+id/action_navegar_para_fase_dois"
+            app:destination="@id/faseDoisNivelTresFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_fases_nivel_bonus"
+        android:name="com.example.jogotcc.NivelBonus.FasesNivelBonusFragment"
+        android:label="FasesNivelBonusFragment">
+        <!-- Ação para navegar para FaseUmNivelUmFragment -->
+        <action
+            android:id="@+id/action_navegar_para_fase_um"
+            app:destination="@id/faseUmNivelBonusFragment" />
+
+        <action
+            android:id="@+id/action_navegar_para_fase_dois"
+            app:destination="@id/faseDoisNivelBonusFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/faseUmNivelUmFragment"
+        android:name="com.example.jogotcc.NivelUm.FaseUmNivelUmFragment"
+        tools:layout="@layout/fragment_fase_um_nivel_um">
+        <action
+            android:id="@+id/action_faseUmNivelUmFragment_to_faseDoisNivelUmFragment"
+            app:destination="@id/faseDoisNivelUmFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faseDoisNivelUmFragment"
+        android:name="com.example.jogotcc.NivelUm.FaseDoisNivelUmFragment"
+        tools:layout="@layout/fragment_fase_dois_nivel_um">
+        <action
+            android:id="@+id/action_faseDoisNivelUmFragment_to_fasesNivelUmFragment"
+            app:destination="@id/fragment_fases_nivel_um" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/faseUmNivelDoisFragment"
+        android:name="com.example.jogotcc.NivelDois.FaseUmNivelDoisFragment"
+        tools:layout="@layout/fragment_fase_um_nivel_dois">
+        <action
+            android:id="@+id/action_faseUmNivelDoisFragment_to_faseDoisNivelDoisFragment"
+            app:destination="@id/faseDoisNivelDoisFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faseDoisNivelDoisFragment"
+        android:name="com.example.jogotcc.NivelDois.FaseDoisNivelDoisFragment"
+        tools:layout="@layout/fragment_fase_dois_nivel_dois">
+        <action
+            android:id="@+id/action_faseDoisNivelDoisFragment_to_fasesNivelDoisFragment"
+            app:destination="@id/fragment_fases_nivel_dois" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/faseUmNivelTresFragment"
+        android:name="com.example.jogotcc.NivelTres.FaseUmNivelTresFragment"
+        tools:layout="@layout/fragment_fase_um_nivel_tres">
+        <action
+            android:id="@+id/action_faseUmNivelTresFragment_to_faseDoisNivelTresFragment"
+            app:destination="@id/faseDoisNivelTresFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faseDoisNivelTresFragment"
+        android:name="com.example.jogotcc.NivelTres.FaseDoisNivelTresFragment"
+        tools:layout="@layout/fragment_fase_dois_nivel_tres">
+        <action
+            android:id="@+id/action_faseDoisNivelTresFragment_to_fasesNivelTresFragment"
+            app:destination="@id/fragment_fases_nivel_tres" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/faseUmNivelBonusFragment"
+        android:name="com.example.jogotcc.NivelBonus.FaseUmNivelBonusFragment"
+        tools:layout="@layout/fragment_fase_um_nivel_bonus">
+        <action
+            android:id="@+id/action_faseUmNivelBonusFragment_to_faseDoisNivelBonusFragment"
+            app:destination="@id/faseDoisNivelBonusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faseDoisNivelBonusFragment"
+        android:name="com.example.jogotcc.NivelBonus.FaseDoisNivelBonusFragment"
+        tools:layout="@layout/fragment_fase_dois_nivel_bonus">
+        <action
+            android:id="@+id/action_faseDoisNivelBonusFragment_to_fasesNivelBonusFragment"
+            app:destination="@id/fragment_fases_nivel_bonus" />
+    </fragment>
+
+</navigation>
