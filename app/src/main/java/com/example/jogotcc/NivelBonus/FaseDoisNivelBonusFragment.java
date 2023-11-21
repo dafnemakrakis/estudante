@@ -139,7 +139,7 @@ public class FaseDoisNivelBonusFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(
-                        R.id.action_faseDoisNivelBonusFragment_to_fasesNivelBonusFragment
+                        R.id.action_faseDoisNivelBonusFragment_to_niveisFragment
                 );
             }
         });

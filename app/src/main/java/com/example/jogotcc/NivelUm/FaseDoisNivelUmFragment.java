@@ -85,7 +85,7 @@ public class FaseDoisNivelUmFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(
-                        R.id.action_faseDoisNivelUmFragment_to_fasesNivelUmFragment
+                        R.id.action_faseDoisNivelUmFragment_to_niveisFragment
                 );
             }
         });
